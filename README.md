@@ -7,7 +7,7 @@ Run the app by typing this command: `docker run -d -p 8000:8000 pyapp`
 
 # Tools Used
 
-This app was made using the pyonceperday library (written by myself), pytest, uv, Django, and Docker. 
+This app was made using the [pyonceperday library](https://pypi.org/project/pyonceperday/) (written by myself), pytest, [uv](https://docs.astral.sh/uv/), Django, and Docker. 
 
 You can run the tests for this app by installing uv and running `uv sync`. After
 the environment has been synced, run `uv run manage.py test` in the root folder. 
@@ -18,7 +18,7 @@ A look at the UI mockup can be [found here](https://www.figma.com/design/p31WfgP
 
 # Assumptions
 
-I made several assumptions. The first is that the event would be a maximum of 120 minutes. The second assumption is that event repeat up to 4 weeks. 
+I made several assumptions. The first is that the event would be a maximum of 120 minutes. The second assumption is that an event can repeat up to 4 weeks. 
 
 
 
