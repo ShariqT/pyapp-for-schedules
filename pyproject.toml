@@ -1,0 +1,10 @@
+[project]
+name = "pyschedule-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "django>=5.2",
+    "pyonceperday==0.1.3",
+]
