@@ -6,8 +6,8 @@ from . import models
 def create_new_event(event_data):
   # check for required keys
   required_keys = ["name", "start", "duration", "days"]
-  for name in event_data.keys():
-    if name not in required_keys:
+  for name in required_keys:
+    if name not in event_data.keys():
       raise Exception("Missing required event information")
   
   start = datetime.fromisoformat(event_data['start'])
@@ -15,7 +15,10 @@ def create_new_event(event_data):
   event = Event(event_data['name'], start, event_data['duration'])
   event.days = []
   if 'repeat' in event_data.keys():
-    event.repeat = event_data['repeat']
+    if event_data['repeat'] == 1:
+      event.repeat = True
+    else:
+      event.repeat = False
     event.repeat_number_of_weeks = event_data['number_of_weeks']
   
   for day in event_data["days"]:
